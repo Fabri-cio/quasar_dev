@@ -1,0 +1,36 @@
+<header
+  x-data="{ scrolled: false }"
+  x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 50 })"
+  :class="scrolled ? 'bg-slate-900/90 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'"
+  class="w-full fixed top-0 z-50 transition-all duration-300 border-b border-white/10"
+>
+  <nav class="max-w-6xl mx-auto flex justify-between items-center px-4">
+    <!-- LOGO -->
+    <div class="flex items-center gap-3">
+      <img
+        src="/logo-icon.png"
+        alt="Quasar Dev"
+        :class="scrolled ? 'w-8 h-8' : 'w-10 h-10'"
+        class="transition-all duration-300 drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]"
+      />
+      <span
+        class="text-xl font-bold bg-linear-to-r from-blue-400 to-green-400 bg-clip-text text-transparent"
+      >
+        Quasar Dev
+      </span>
+    </div>
+
+    <!-- MENU -->
+    <ul class="flex gap-6 text-sm text-slate-300">
+      <li>
+        <a href="#servicios" class="hover:text-white transition">Servicios</a>
+      </li>
+      <li>
+        <a href="#proyectos" class="hover:text-white transition">Proyectos</a>
+      </li>
+      <li>
+        <a href="#contacto" class="hover:text-white transition">Contacto</a>
+      </li>
+    </ul>
+  </nav>
+</header>
