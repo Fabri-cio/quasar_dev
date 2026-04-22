@@ -1,0 +1,64 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Sistema de Viáticos">
+  <section class="max-w-6xl mx-auto px-4 py-16 text-white">
+    <h1 class="text-3xl font-bold mb-10">Sistema de Viáticos</h1>
+
+    <!-- DASHBOARD -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="bg-white/5 p-6 rounded-xl">Pendientes: 5</div>
+      <div class="bg-white/5 p-6 rounded-xl">Aprobadas: 12</div>
+      <div class="bg-white/5 p-6 rounded-xl">En revisión: 3</div>
+    </div>
+
+    <!-- FORMULARIO -->
+    <div class="bg-white/5 p-6 rounded-xl mb-10">
+      <h2 class="text-xl mb-4">Solicitud de Viáticos</h2>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <input placeholder="Nombre completo" class="p-2 rounded bg-slate-800" />
+        <input placeholder="Destino" class="p-2 rounded bg-slate-800" />
+        <input placeholder="Días" class="p-2 rounded bg-slate-800" />
+        <input placeholder="Motivo" class="p-2 rounded bg-slate-800" />
+        <input
+          placeholder="Monto solicitado"
+          class="p-2 rounded bg-slate-800"
+        />
+      </div>
+
+      <button class="mt-4 bg-blue-600 px-4 py-2 rounded">
+        Enviar solicitud
+      </button>
+    </div>
+
+    <!-- TABLA -->
+    <div class="bg-white/5 p-6 rounded-xl">
+      <h2 class="text-xl mb-4">Solicitudes</h2>
+
+      <table class="w-full text-left">
+        <thead>
+          <tr class="text-slate-400">
+            <th>Nombre</th>
+            <th>Destino</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Juan Pérez</td>
+            <td>Santa Cruz</td>
+            <td class="text-yellow-400">Pendiente</td>
+          </tr>
+          <tr>
+            <td>Ana López</td>
+            <td>La Paz</td>
+            <td class="text-green-400">Aprobado</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</Layout>
